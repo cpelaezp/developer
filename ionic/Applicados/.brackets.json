@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "P:/personal/1.working/wnse/ionic/Applicados/platforms/android/assets/www/lib/ionic/js/ionic.min.js",
+        "P:/personal/1.working/wnse/ionic/Applicados/www/js/controllers.js",
+        "P:/personal/1.working/wnse/ionic/Applicados/platforms/android/assets/www/lib/ion-md-input/demo/www/lib/ionic/js/ionic.min.js",
+        "P:/personal/1.working/wnse/ionic/Applicados/platforms/android/assets/www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+        "P:/personal/1.working/wnse/ionic/Applicados/www/js/factorydb.js"
+    ]
+}

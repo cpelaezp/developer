@@ -1,0 +1,113 @@
+<ion-modal-view title-view="Ingrese">
+    <ion-header-bar>
+        <h1 class="title">Ingrese</h1>
+        <button class="button button-icon button-clear ion-close-round" menu-toggle="right" ng-click="closeLogin()">
+                    </button>
+    </ion-header-bar>
+    <ion-tabs class="tabs-icon-top">
+        <ion-tab title="Alumnos" 
+                 icon-on="ion-android-contact" 
+                 icon-off="ion-android-contact" 
+                 >
+                <form name="loginFormAlumnos" novalidate="" ng-submit="summitAlumnos(userModelAlumnos)">
+                    <div>
+                        <br><br><br><br><br>
+                        <h4 class="h4Start"> {{ infoModelAlumnos.title }} </h4>
+                        <br>
+                        <br>
+                        <p class="pStart"> {{ infoModelAlumnos.welcome }} </p>
+                    </div>            
+                    <div class="list"> 
+                        <ion-md-input name="user" ng-model="userModelAlumnos.user" 
+                                      ng-class="{ 'has-error' : loginFormAlumnos.user.$invalid } "
+                                      placeholder="Usuario" highlight-color="balanced" type="text"></ion-md-input>
+                        <ion-md-input name="password" ng-model="userModelAlumnos.password" 
+                                      ng-class="{ 'has-error' : loginFormAlumnos.password.$invalid } "
+                                      placeholder="Contraseña" highlight-color="energized" type="password" ></ion-md-input>
+                    </div>
+                    <!--div class="padding  form-errors" >
+                        <p ng-show="loginForm.user.$error.required">* Debe ingresar el usuario...</p>
+                        <p ng-show="loginForm.password.$error.required">* Debe ingresar el password</p> 
+                    </div-->
+                    <div class="padding">
+                        <button type="button" 
+                                class="button button-block" 
+                                ng-disabled="loginFormAlumnos.$invalid" 
+                                ng-click="signIn(loginFormAlumnos)">{{ infoModelAlumnos.buttonName }}</button>
+                    </div>
+                        <br>
+                </form>
+        </ion-tab>
+        <ion-tab title="Docentes" 
+                 icon-on="ion-android-people" 
+                 icon-off="ion-android-people" 
+                 >
+                <form name="loginFormDocentes" novalidate="" ng-submit="summitDocentes(loginFormDocentes)">
+                    <div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h4 class="h4Start"> {{ infoModelDocentes.title }} </h4>
+                        <br>
+                        <p class="pStart"> {{ infoModelDocentes.welcome }} </p>
+                    </div>            
+                    <div class="list"> 
+                        <ion-md-input name="user" ng-model="userModelDocentes.user" 
+                                      ng-class="{ 'has-error' : loginFormDocentes.user.$invalid } "
+                                      placeholder="Usuario" highlight-color="balanced" type="text"></ion-md-input>
+                        <ion-md-input name="password" ng-model="userModelDocentes.password" 
+                                      ng-class="{ 'has-error' : loginFormDocentes.password.$invalid } "
+                                      placeholder="Contraseña" highlight-color="energized" type="password" ></ion-md-input>
+                    </div>
+                    <!--div class="padding  form-errors" >
+                        <p ng-show="loginForm.user.$error.required">* Debe ingresar el usuario...</p>
+                        <p ng-show="loginForm.password.$error.required">* Debe ingresar el password</p> 
+                    </div-->
+                    <div class="padding">
+                        <button type="button" 
+                                class="button button-block" 
+                                ng-disabled="loginFormDocentes.$invalid" 
+                                ng-click="signIn(loginFormDocentes)">{{ infoModelDocentes.buttonName }}</button>
+                    </div>
+                </form>
+        </ion-tab>
+        <ion-tab title="Padres" 
+                 icon-on="ion-person-stalker" 
+                 icon-off="ion-person-stalker">            
+                <form name="loginFormPadres" novalidate="" ng-submit="summitPadres(loginFormPadres)">
+                    <div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h4 class="h4Start"> {{ infoModelPadres.title }} </h4>
+                        <br>
+                        <br>
+                        <p class="pStart"> {{ infoModelPadres.welcome }} </p>
+                        <br>
+                    </div>            
+                    <div class="list"> 
+                        <ion-md-input name="user" ng-model="userModelPadres.user" 
+                                      ng-class="{ 'has-error' : loginFormPadres.user.$invalid } "
+                                      placeholder="Usuario" highlight-color="balanced" type="text"></ion-md-input>
+                        <ion-md-input name="password" ng-model="userModelPadres.password" 
+                                      ng-class="{ 'has-error' : loginFormPadres.password.$invalid } "
+                                      placeholder="Contraseña" highlight-color="energized" type="password" ></ion-md-input>
+                    </div>
+                    <!--div class="padding  form-errors" >
+                        <p ng-show="loginForm.user.$error.required">* Debe ingresar el usuario...</p>
+                        <p ng-show="loginForm.password.$error.required">* Debe ingresar el password</p> 
+                    </div-->
+                    <div class="padding">
+                        <button type="button" 
+                                class="button button-block" 
+                                ng-disabled="loginFormPadres.$invalid" 
+                                ng-click="signIn(loginFormPadres)">{{ infoModelPadres.buttonName }}</button>
+                    </div>
+                </form>
+        </ion-tab>
+    </ion-tabs>      
+  </ion-content>
+</ion-modal-view>

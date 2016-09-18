@@ -1,0 +1,46 @@
+<ion-side-menus enable-menu-with-back-views="true" class="footermenu">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive-900" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="fabContent"></ion-nav-view>
+        <ion-nav-view name="menuContent" ng-class="{expanded: isExpanded}" ></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right" ng-controller="AppCtrl">
+        <ion-header-bar class="dark-bg expanded headermenu">
+            <div>
+                <span class="avatar" style="background: url('img/crown.jpg'); background-size: cover;"></span>
+                <h2>Applicados</h2>
+            </div>
+            <!--div class="tabs tabs-dark tabs-icon-top static">
+                <a ui-sref="app.activity" class="tab-item">
+                    <i class="icon ion-arrow-graph-up-right"></i> Activity
+                </a>
+                <a ui-sref="app.friends" class="tab-item">
+                    <i class="icon ion-android-people"></i> Friends
+                </a>
+                <a ui-sref="app.gallery" class="tab-item">
+                    <i class="icon ion-images"></i> Photos
+                </a>
+            </div-->
+        </ion-header-bar>
+        <ion-content class="stable-bg has-expanded-header footermenu">
+            <ion-list class="list">
+                <ion-item ng-repeat="menu in menus" ng-click="goto('{{ menu.idMenu }}', '{{ menu.activity }}', '{{ menu.click }}')"
+                          nav-clear menu-close 
+                          class="item-icon-right item-avatar item_menu"
+                          ng-show="getLogon('{{ menu.idMenu }}')"
+                          >
+                    <img src="img/{{ menu.image }}">
+                    <h4>{{ menu.menu }}</h4>
+                    <p>{{ menu.descripcion }}</p>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

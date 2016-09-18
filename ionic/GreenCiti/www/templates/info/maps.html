@@ -1,0 +1,51 @@
+<!--ion-view view-title="Mapas">
+    <ion-floating-button class="floating-button-mapcenter" 
+                         icon="ion-location" 
+                         button-color="#ffffff"
+                         icon-color="#000000"
+                         click="centerOnMe()">
+    </ion-floating-button>    
+    <br><br>
+    <ion-content>
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+    <ion-footer-bar class="bar-stable">
+        <ion-list ng-repeat="item in ListButton">
+            <a class="button button-icon icon" 
+               ng-class="item.checked ? '{{ item.iconOn }}' : '{{ item.iconOff }}'"
+               ng-click="setButton({{ item.idreto }})"
+               > 
+            </a>
+        </ion-list>    
+    </ion-footer-bar>
+</ion-view-->
+
+<ion-view cache-view="false" view-title="Mapas"  > 
+
+	<ion-content class="has-header list-padding" has-bouncing="true" >
+	
+	
+ <div id="map" data-tap-disabled="true"></div>
+		
+	</ion-content>
+	<ion-footer-bar class="bar-stable">
+        
+            <!--div class="row container-side-menu" ng-repeat="item in ListButton">
+                <button class="button button-icon" 
+                        ng-click="setButton({{ item.idreto }})"
+                        >
+                    <i class="icon " ng-class="item.checked ? '{{ item.iconOn }}' : '{{ item.iconOff }}'"></i> 
+                </button>
+            </div-->        
+        
+        <ion-list ng-repeat="item in ListButton">
+            <a class="button button-icon icon" 
+               ng-class="item.checked ? '{{ item.iconOn }}' : '{{ item.iconOff }}'"
+               ng-click="setButton({{ item.idreto }})"
+               > 
+            </a>
+        </ion-list>    
+      <!--a ng-click="GetGeoLocation()" class="button button-icon icon ion-navigate">Find Me</a-->
+    </ion-footer-bar>
+	
+</ion-view>

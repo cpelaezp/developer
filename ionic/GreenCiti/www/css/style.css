@@ -1,0 +1,332 @@
+/* Empty. Add your own CSS if you like */
+
+.img .small-image {
+    width: 100%; 
+    width: 100%; 
+	border-radius : 50% !important;
+	border : 2px solid black !important;	/* can alter thickness and colour of circle on this line */
+}
+
+
+.viewContent {
+    background-image: url('../img/fondo.png') no-repeat center;
+}
+
+.pane11 {
+    background: url('../img/fondo.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.pane {
+    border-color: black;    
+    border: 1px solid;
+    
+}
+
+.bar.bar-active {
+    /*background-color: rgba(255,255,255,.0) !important; /* or transparent, or background:none */
+    background-color: #a4cb17;
+    color: white;
+    background-image: url('../img/bar-icon-greenciti.png') no-repeat center middle;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.scroll-content {
+  overflow: visible !important;
+}
+
+.platform-android .bar .title {
+    font-size: 13px;
+    line-height: 44px;
+    color: #fff !important;
+    text-align: center;
+    padding: 13px 0px 0px 0px;
+}
+
+.platform-android .bar .titleLogo {
+    font-size: 14px;
+    color: white !important;
+    text-align: center;
+    padding: 0px 0px 20px 20px !important;
+}
+
+
+.floating-button-login {
+    bottom: 20px  !important;
+    right: 50px  !important;
+    width: 35px  !important;
+    height: 35px  !important;
+    line-height: 35px  !important;
+}
+
+.floating-button-home {
+    bottom: 5px  !important;
+    right: 5px  !important;
+    width: 35px  !important;
+    height: 35px  !important;
+    line-height: 35px  !important;
+}
+
+.floating-button-mapcenter {
+    top: 75px  !important;
+    right: 5px  !important;
+    width: 35px  !important;
+    height: 35px  !important;
+    line-height: 35px  !important;
+}
+
+
+.floating-menu-main {
+    bottom: 50px  !important;
+    right: 10px  !important;
+    width: 35px  !important;
+    height: 35px  !important;
+    line-height: 35px  !important;
+}
+
+#floating-menu.active .active > li:nth-child(1) {
+    transition-delay: 0ms;
+    top: -50px;
+}
+
+
+.home-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+
+.row-intro-header {
+    border-bottom-style: solid;
+    border: 1;
+}
+
+.boxretos, box2, box3 {
+    height: 100px;
+    border: 2px solid #000000;
+    font-size: 12;
+    background-color: #ff5f53;
+}
+
+*[data-tooltip] {
+    position: relative;
+}
+
+*[data-tooltip]::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 150px;
+
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    background: #fefdcd;
+    padding: 2px 2px;
+    border: 1px solid #c0c0c0;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+*[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+
+
+.content-background {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    opacity: 0.6;
+}
+
+.content-background-reto {
+    width: 100%;
+    height: 100%;
+}
+.content-background-color {
+    background-color: rgba(256, 256, 256, 0.69);
+    width: 100%;
+}
+
+.background_about {
+    background: url(../img/tema-1.jpg);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.background_about_color_intro {
+    background-color: rgba(195, 219, 190, 0.69);
+}
+
+.background_about_color {
+    background-color: rgba(256, 256, 256, 0.69);
+}
+
+.layer_about_margins {
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.layer_about_1 {
+    background-color: rgba(256, 256, 256, 0.83);
+    width: 100%;
+    height: 100%;
+}
+
+.layer_about_2 {
+    background-color: rgba(162, 17, 54, 0.83);
+    width: 100%;
+    height: 100%;
+}
+
+.button.button-menu-retos {
+    border-color: transparent;
+    background-color: #f5542e;
+    color: #fff;
+}
+
+.button.button-menu-maps {
+    border-color: transparent;
+    background-color: #97be9f;
+    color: #fff;
+}
+
+.button.button-menu-info {
+    border-color: transparent;
+    background-color: #003c23;
+    color: #fff;
+}
+
+.button.button-menu-statistics {
+    border-color: transparent;
+    background-color: #4c7694;
+    color: #fff;
+}
+
+.spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+
+.bar .button.back-button {
+    color: white;
+}
+
+.textWrap {
+    float: right;
+    margin: 5px;
+    width: 50%;
+    height: 50%;
+	border-radius : 50%;
+	border : 2px solid black;	/* can alter thickness and colour of circle on this line */
+
+}
+
+.textWrapLeft {
+    float: right;
+    margin: 10px;
+}
+
+/* container */
+.container-side-menu {
+  width: 10%;
+  top: 15%;
+  align-items: center !important;
+}
+.container-side-menu .button {
+  font-size: 14px;
+  line-height: 6px; // Add
+}
+.container-side-menu .button-icon .icon {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 3px !important;
+}
+
+
+/* Main Container -  this controls the size of the circle */
+.circle_container
+{
+	width : 128px;
+	height : 128px;
+	margin : 0;
+	padding : 0;
+/*	border : 1px solid red; */
+}
+
+/* Circle Main draws the actual circle */
+.circle_main
+{
+	width : 100%;
+	height : 100%;
+	border-radius : 50%;
+	border : 2px solid black;	/* can alter thickness and colour of circle on this line */
+	margin : 0;
+	padding : 0;
+}
+
+/* Circle Text Container - constrains text area to within the circle */
+.circle_text_container
+{
+	/* area constraints */
+	width : 70%;
+	height : 70%;
+	max-width : 70%;
+	max-height : 70%;
+	margin : 0;
+	padding : 0;
+
+	/* some position nudging to center the text area */
+	position : relative;
+	left : 15%;
+	top : 15%;
+	
+	/* preserve 3d prevents blurring sometimes caused by the text centering in the next class */
+	transform-style : preserve-3d;
+	
+	/*border : 1px solid green;*/
+}
+
+/* Circle Text - the appearance of the text within the circle plus vertical centering */
+.circle_text
+{
+	/* change font/size/etc here */
+	font: 11px "Tahoma", Arial, Serif;	
+	text-align : center;
+	
+	/* vertical centering technique */
+	position : relative;
+	top : 50%;
+	transform : translateY(-50%);
+}

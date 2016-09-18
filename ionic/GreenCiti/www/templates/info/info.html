@@ -1,0 +1,53 @@
+<ion-view view-title="Información">
+    <ion-content>
+        <!--div class = "row responsive-sm" style="height: 100%;">
+            <div class="item"> <h2>Temas de Interes</h2><br>
+            </div>
+            <div class = "col text-left background_about_color_intro">
+                <div ng-repeat="tema in temas" class="content-background-color">
+                    <a class="content-background" style=" background: url(img/{{ tema.image }});
+" ng-click="openLink(post.url)">
+                                <h4 class="post-title">{{ tema.name }}</h4>
+                                <p> 
+                                    {{ tema.summary }} 
+                                </p>
+                    </a>
+                </div>
+            </div-->
+        <div class="list card" ng-repeat="tema in temas">
+            <div class="item item-avatar">
+                <img src="img/{{ tema.image }}">
+                <h2>{{ tema.name }}</h2>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" src="img/{{ tema.image }}">
+                <p>{{ tema.summary }} </p>
+                <p>
+                  <a href="#" class="subdued">1 Like</a>
+                  <a href="#" class="subdued">3 Comments</a>
+                  <a href="#" class="subdued">8 Share</a>
+                </p>
+
+            </div>
+            
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-thumbsup"></i>
+                    Like
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i>
+                    Comment
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i>
+                    Share
+                </a>
+                <a class="tab-item" ui-sref="temaid({ id : {{ tema.id }} })">
+                    <i class="icon ion-information-circled"></i>
+                    Ver mas
+                </a>
+            </div>
+        </div>        
+    </ion-content>
+</ion-view>

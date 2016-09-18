@@ -1,0 +1,45 @@
+<ion-view view-title="Reto">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+    <div class="item item-avatar" >
+        <img ng-src="img/{{reto.image}}">
+        <h2>{{ reto.reto }}</h2>
+        <p> {{ reto.summary }} </p>
+    </div>      
+    <ion-tabs class="tabs-icon-top tabs-background-{red} tabs-color-active-positive">
+        <ion-tab title="Información" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+            <!-- Tab 1 content -->
+            <div class="item item-body">
+                <h2>Información</h2>
+                {{ reto.descripcion }}
+            </div>
+        </ion-tab>
+        <ion-tab title="Estadisticas" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+            <!-- Tab 2 content -->
+            <div class="item item-body">
+                <canvas id="line" class="chart chart-line" chart-data="data"
+                  chart-labels="labels" chart-legend="true" chart-series="series"
+                  chart-click="onClick" >
+                </canvas> 
+            </div>    
+        </ion-tab>
+        <ion-tab title="Mapas" icon-on="ion-ios-location" icon-off="ion-ios-location-outline">
+            <!-- Tab 2 content -->
+            <div class="item item-body" ng-controller="mapsCtrl">
+                    <div id="map" data-tap-disabled="true"></div>
+            </div>    
+        </ion-tab>
+
+        <ion-tab title="Premios" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+            <!-- Tab 3 content -->
+            <div class="item">
+                <ion-list>
+                    <ion-item class="item-avatar" ng-repeat="retoPerson in retoPersons">
+                        <img ng-src="img/persons/{{ retoPerson.avatar }}">
+                        <h2> {{ retoPerson.id }} - {{ retoPerson.name }}</h2>
+                        <p> {{ retoPerson.comment }}</p>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

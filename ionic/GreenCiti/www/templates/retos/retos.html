@@ -1,0 +1,16 @@
+<ion-view view-title="Retos">
+    <ion-content>
+        <div class="list card" ng-repeat="reto in retos">
+            <div class="item item-avatar" >
+                <img ng-src="img/{{reto.image}}">
+                <h2>{{ reto.reto }}</h2>
+                <p> {{ reto.summary }} </p>
+
+                <div class="item item-body">
+                    <p> {{ reto.descripcion }} </p>
+                </div>
+                <button ui-sref="retosid({ id : {{ reto.idreto }} })"> Detalles </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

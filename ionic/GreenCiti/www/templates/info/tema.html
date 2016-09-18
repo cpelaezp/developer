@@ -1,0 +1,29 @@
+<ion-view view-title="Tema">
+    <ion-content>
+        <div class="item item-avatar" >
+            <img ng-src="img/{{ tema.image }}">
+            <h2>{{ tema.name }}</h2>
+        </div>      
+        <div class="item item-body" >
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-thumbsup"></i>
+                    Like
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i>
+                    Comment
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i>
+                    Share
+                </a>
+            </div>
+            <p> {{ tema.summary }} </p>
+        </div>      
+        <div class="item item-body" >
+            <img class="full-image" ng-src="img/{{ tema.image }}">
+            <p>{{ tema.descripcion }}</p>
+        </div>      
+    </ion-content>
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-view view-title="Intro">
+    <ion-content scroll=false class="background_about_color_intro1">
+        <div class = "row row-intro-header text-center">
+            <div class = "col text-left">
+                <h4>Ciudad - Neiva</h4>
+            </div>
+        </div>
+ 
+        <div class = "row responsive-sm">
+            <div class = "col text-left background_about_color_intro" tooltip="retos">
+                <ion-slide-box auto-play="true" slide-interval="10000" does-continue="true">
+                    <ion-slide ng-repeat="reto in retos" ui-sref="retosid({ id : {{ reto.idreto }} })">
+                        <a class="item item-thumbnail-left" ng-click="openLink(post.url)">
+                            <img ng-src="img/{{ reto.image }}"/>
+                            <p> 
+                                <h2 class="post-title">{{ reto.reto }}</h2>
+                                {{ reto.descripcion }} 
+                            </p>
+                        </a>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+        </div>
+        <div class = "row responsive-sm">
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" ui-sref="info">
+                    <i class="icon ion-leaf"></i>
+                    Información
+                </a>
+                <a class="tab-item" ui-sref="retos">
+                    <i class="icon ion-ribbon-b"></i>
+                    Retos
+                </a>
+                <a class="tab-item" ui-sref="statistics">
+                    <i class="icon ion-stats-bars"></i>
+                    Estadisticas
+                </a>
+                <a class="tab-item" ui-sref="maps">
+                    <i class="icon ion-map"></i>
+                    Mapa
+                </a>
+            </div>
+        </div>
+    
+        <div class = "row responsive-sm" style="height: 100%;">
+            <div class = "col text-left background_about_color_intro">
+                <ion-slide-box auto-play="true" slide-interval="10000" does-continue="true">
+                    <ion-slide ng-repeat="tema in temas" class="content-background-color" ui-sref="temaid({ id : {{ tema.id }} })">
+                        <div class="list card">
+                            <div class="item">
+                                <h4> {{ tema.name }} </h4>
+                            </div>
+                            <div class="item item-body">
+                                <img class="textWrap" src="img/{{ tema.image }}">  
+                                <p> {{ tema.summary }} </p>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+                        
+        </div>
+    </ion-content>
+</ion-view>

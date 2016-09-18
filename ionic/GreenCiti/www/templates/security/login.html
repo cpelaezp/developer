@@ -1,0 +1,30 @@
+<ion-view view-title="Login" ng-controller="loginCtrl">
+    <ion-header-bar>
+        <h1 class = "title">Login</h1>
+        <button class = "button icon icon-rigth ion-ios-close-outline" ng-click = "cancelLogin()"></button>
+    </ion-header-bar>
+    <ion-content>
+        <form name="loginForm" novalidate>
+            <div class="list"> 
+                <label class="item item-input">
+                    <span class="input-label">Usuario</span>
+                    <input type="text" name="user_name" ng-model="user.user_name" ng-maxlength="50" 
+                           placeholder=" Ingrese el Usuario" 
+                           class="test-align" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="text" name="user_password" ng-model="user.user_password" 
+                           ng-maxlength="50" placeholder="Ingrese el Password" required>
+                </label>
+            </div>
+            <div class="padding">
+                <p ng-show="loginForm.user_name.$error.required">* El usuario es requerido</p>
+                <p ng-show="loginForm.user_password.$error.required">* El password es requerido</p> 
+            </div>
+            <div>
+                <button type="button" class="button button-block button-positive" ng-disabled="loginForm.$invalid" ng-click="summit(nota)">Login</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
